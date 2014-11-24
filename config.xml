@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.curso.meuapp" version="1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0"> ​
+    <name>Rock, Paper, Scissors, Lizard, Spock</name>​
+    <description>​
+        Game for Nerds
+    </description>​
+    <author email="g.ferreiraamorim@gmail.com" href="https://github.com/guii-amorim">​
+        Guilherme Amorim
+    </author>​
+    <content src="index.html" />​
+    <access origin="*" />​
+    <icon src="genius_64px.png"/>​
+    <gap:plugin name="de.appplant.cordova.plugin.local-notification" version="0.7.4" />
+    <preference name="orientation" value="portrait" />
+    <preference name="permissions" value="none"/>
+</widget>

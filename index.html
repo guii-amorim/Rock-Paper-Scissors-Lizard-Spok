@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/icon-style.css">
+        <script src="js/functions.js"></script>
+    </head>
+    <body>
+        <div class="container" id="EN">
+            <header>
+                <span class="icon-genius"></span>
+            </header>
+            <div id="start" class="start">
+                <button type="button" class="start-button" onclick="nextPage('start', 'name')">START</button>
+            </div>
+            <div id="name" class="name">
+                <form onsubmit="setName(); nextPage('name', 'characters'); return false;">
+                    <label>What's your name?</label>
+                    <input class="input-name" id="input-name" autofocus autocomplete="off" maxlength="30" />
+                </form>
+            </div>
+            <div id="characters" class="characters">
+                <h1>Chose your character:</h1>
+                <button class="choice-button" onclick="setCharacter('rock')" id="rock">Rock</button>
+                <button class="choice-button" onclick="setCharacter('paper')" id="paper">Paper</button>
+                <button class="choice-button" onclick="setCharacter('scissors')" id="scissors">Scissors</button>
+                <button class="choice-button" onclick="setCharacter('lizard')" id="lizard">Lizard</button>
+                <button class="choice-button" onclick="setCharacter('spock')" id="spock">Spock</button>
+                <button class="button" onclick="nextPage('characters', 'versus'); play();">Play</button>
+                <button class="button" onclick="prevPage('characters', 'name')">back</button>
+            </div>
+            <div id="versus" class="versus">
+                <div class="computer">
+                    <div id="cp-name"></div>
+                    <div id="cp-chr"></div>
+                </div>
+                <div class="user">
+                    <div id="usr-name"></div>
+                    <div id="usr-chr"></div>
+                </div>
+                <div id="result" class="result"></div>
+                <button class="button-small" onclick="prevPage('versus', 'characters'); clearData('character');">Play again</button>
+                <button class="button-small" onclick="prevPage('versus', 'name'); clearData('all');">Play again whit another name</button>
+            </div>
+        </div>
+    </body>
+</html>
